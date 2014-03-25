@@ -1,6 +1,10 @@
 CmsByToni::Application.routes.draw do
 
-	root "welcome#index"
+  get "articles/index"
+  get "articles/show"
+  get "articles/new"
+  get "articles/edit"
+	root "articles#index" #tuka se
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
