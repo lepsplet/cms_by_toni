@@ -20,7 +20,6 @@ development:
   database: cms_by_toni_development
   pool: 5
   host: localhost
-  username: action
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -54,9 +53,11 @@ test:
   password:
 
 production:
-  adapter: postgresql
+  dapter: postgresql
   encoding: unicode
-  database: cms_by_toni_production
   pool: 5
-  username: action
-  password:
+  database: d78ht6v8aip4ro
+  username: deehtliqlbtrsq
+  password: 3f7y41pZbmoMKFv1ygTExO7x-6
+  host: ec2-54-204-16-232.compute-1.amazonaws.com
+  port: 5432
