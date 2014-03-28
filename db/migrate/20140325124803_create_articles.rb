@@ -1,6 +1,9 @@
 class CreateArticles < ActiveRecord::Migration
   def change
     create_table :articles do |t|
+		t.references :subcategory
+		t.string :name
+		t.text :body
 
       t.timestamps
     end

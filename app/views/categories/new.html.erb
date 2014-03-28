@@ -1,0 +1,6 @@
+<h1>Vnesi novo kategorijo</h1>
+<%= form_for @category do |f| %>
+	<div><%= f.label :name %></div>
+	<div><%= f.text_field :name %></div>
+	<div><%= f.submit %></div>
+<% end %>

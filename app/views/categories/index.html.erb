@@ -1,0 +1,5 @@
+<h1>Vse kategorije</h1>
+<% @categories.each do |category| %>
+	<div><%= category.name %>
+<% end %>
+<div><%= link_to 'Dodaj novo kategorijo', new_category_path %></div>
