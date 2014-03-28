@@ -1,2 +1,8 @@
-<h1>Categories#edit</h1>
-<p>Find me in app/views/categories/edit.html.erb</p>
+<h1>Spremeni naslov kategorije</h1>
+<%= form_for @category do |f| %>
+	<div><%= f.label :name %></div>
+	<div><%= f.text_field :name %></div>
+	<div><%= f.submit %></div>
+<% end %>
+
+<%= link_to 'nazaj na kategorije', categories_path %>
