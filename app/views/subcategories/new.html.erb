@@ -1,2 +1,7 @@
-<h1>Subcategories#new</h1>
-<p>Find me in app/views/subcategories/new.html.erb</p>
+<h1>Vnesi novo podkategorijo</h1>
+
+<%= form_for @subcategory do |f| %>
+	<div><%= f.label :name %></div>
+	<div><%= f.text_field :name %></div>
+	<div><%= f.submit %></div>
+<% end %>

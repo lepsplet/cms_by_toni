@@ -2,8 +2,9 @@
 <% @categories.each do |category| %>
 	<div>
 		<%= link_to category.name, { controller: :subcategories, action: :index, id: category.id } %>
-		<%= link_to 'edit', edit_category_path(category) %>
+		<%= link_to 'uredi', edit_category_path(category) %>
 		<%= link_to 'Izbriši', category_path(category), method: :delete, data: { confirm: "Ali ste prepričani, da želite kategorijo izbrisati?" } %>
 	</div>
 <% end %>
+<br>
 <div><%= link_to 'Dodaj novo kategorijo', new_category_path %></div>
