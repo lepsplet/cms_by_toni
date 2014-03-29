@@ -1,6 +1,12 @@
 CmsByToni::Application.routes.draw do
 
+  get "subcategories/index"
+  get "subcategories/new"
+  get "subcategories/edit"
 	resources :categories 
+	resources :subcategories
+
+
   get "categories/index"
   get "categories/new"
   get "categories/edit"
