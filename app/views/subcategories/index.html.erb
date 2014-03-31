@@ -1,4 +1,4 @@
 <h1>Vse podkategorije za <%= @category.name %></h1>
 <br>
-<%= link_to 'Dodaj podkategorijo', new_subcategory_path %>
+<%= link_to 'Dodaj podkategorijo', controller: :subcategories, action: :new, id: @category.id %>
 

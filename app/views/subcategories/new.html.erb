@@ -1,7 +1,10 @@
 <h1>Vnesi novo podkategorijo</h1>
 
-<%= form_for @subcategory do |f| %>
+<%= form_for @subcategory, url: { action: :create, id: @category.id} do |f| %>
 	<div><%= f.label :name %></div>
 	<div><%= f.text_field :name %></div>
 	<div><%= f.submit %></div>
 <% end %>
+
+<%= @category.inspect %>
+<%= @subcategory.inspect %>
