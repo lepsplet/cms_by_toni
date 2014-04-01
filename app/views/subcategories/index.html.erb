@@ -4,7 +4,9 @@
 	<p>Ni nobene podkategorije. Bodi car in vnesi eno </p>
 <% else %>
 	<% @subcategories.each do |item| %>
-		<div><%= link_to item.name, controller: :articles, action: :index, id: item.id %></div>
+		<div><%= link_to item.name, controller: :articles, action: :index, id: item.id %>
+			<%= link_to 'uredi', edit_subcategory_path(item) %>
+			<%= link_to 'izbriši', subcategory_path(item), method: :delete, data: { confirm: "Ali ste prepričani, da želite izbrisati podkategorijo?" } %> </div>
 	<% end %>
 <% end %><br>
 <%= link_to 'Dodaj podkategorijo', action: :new, id: @category.id%><br>
