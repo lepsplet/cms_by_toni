@@ -1,6 +1,7 @@
 class SubcategoriesController < ApplicationController
 	def index
 		@category = Category.find(params[:id])
+		@subcategories = @category.subcategories.all
 	end
 
 	def new
@@ -13,7 +14,7 @@ class SubcategoriesController < ApplicationController
 		@subcategory = @category.subcategories.build(subcategory_params)
 
 		if @subcategory.save
-			redirect_to subcategories_path(id: @subcategory.id)
+			redirect_to subcategories_path(id: @category.id)
 		else
 			render 'new'
 		end

@@ -1,4 +1,10 @@
 <h1>Vse podkategorije za <%= @category.name %></h1>
 <br>
-<%= link_to 'Dodaj podkategorijo', controller: :subcategories, action: :new, id: @category.id %>
-
+<% if @subcategories.empty? %>
+	<p>Ni nobene podkategorije. Bodi car in vnesi eno </p>
+<% else %>
+	<%= @subcategories.each do |item| %>
+		<div><%= item.name %></div>
+	<% end %>
+<% end %>
+<%= link_to 'Dodaj podkategorijo', action: :new, id: @category.id%>
