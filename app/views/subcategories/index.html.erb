@@ -3,8 +3,9 @@
 <% if @subcategories.empty? %>
 	<p>Ni nobene podkategorije. Bodi car in vnesi eno </p>
 <% else %>
-	<%= @subcategories.each do |item| %>
-		<div><%= item.name %></div>
+	<% @subcategories.each do |item| %>
+		<div><%= link_to item.name, controller: :articles, action: :index, id: item.id %></div>
 	<% end %>
-<% end %>
-<%= link_to 'Dodaj podkategorijo', action: :new, id: @category.id%>
+<% end %><br>
+<%= link_to 'Dodaj podkategorijo', action: :new, id: @category.id%><br>
+<%= link_to 'Nazaj', categories_path %>

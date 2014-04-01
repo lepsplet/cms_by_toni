@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   def index
+	  @subcategory = Subcategory.find(params[:id])
   end
 
   def show
