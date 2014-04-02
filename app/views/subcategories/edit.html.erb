@@ -1,2 +1,9 @@
-<h1>Subcategories#edit</h1>
-<p>Find me in app/views/subcategories/edit.html.erb</p>
+<h1>Spremeni naslov podkategorije</h1>
+<%= form_for @subcategory do |f| %>
+	<div><%= f.label :name %></div>
+	<div><%= f.text_field :name %></div>
+	<div><%= f.submit %></div>
+<% end %>
+
+<%= link_to 'nazaj na kategorije', categories_path %>
+<%= @subcategory.inspect %>

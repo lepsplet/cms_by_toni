@@ -21,7 +21,19 @@ class SubcategoriesController < ApplicationController
 	end
 
 	def edit
+		@subcategory = Subcategory.find(params[:id])
 	end
+def update
+		@subcategory = Subcategory.find(params[:id])
+
+		if @subcategory.update(subcategory_params)
+			redirect_to action: :index, id: @subcategory.category_id
+			else
+				render 'edit'
+			end
+
+	end
+
 
 	private
 	def subcategory_params
