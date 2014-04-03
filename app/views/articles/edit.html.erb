@@ -1,2 +1,12 @@
-<h1>Articles#edit</h1>
-<p>Find me in app/views/articles/edit.html.erb</p>
+<h1>Uredi Članek</h1>
+<%= form_for @article do |f| %>
+	<div><%= f.label :name %></div>
+	<div><%= f.text_field :name %></div>
+
+	<div><%= f.label :body %></div>
+	<div><%= f.text_area :body %></div>
+	<div><%= f.submit %></div>
+<% end %>
+<br>
+<%= link_to 'nazaj', action: :index, id: @article.subcategory_id %>
+

@@ -4,8 +4,8 @@
 	<p>Ni nobenega članka. Bodi Kralj in napiši kakšnega</p>
 <% else %>
 	<% @articles.each do |item| %>
-		<div><%= link_to item.name, controller: :articles, action: :index, id: item.id %>
-			<%= link_to 'uredi', edit_article_path(item) %>
+		<div>
+			 <%= link_to item.name, edit_article_path(item) %>
 			<%= link_to 'izbriši', article_path(item), method: :delete, data: { confirm: "Ali ste prepričani, da želite izbrisati članek?" } %> </div>
 	<% end %>
 <% end %><br>
