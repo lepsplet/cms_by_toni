@@ -1,3 +1,7 @@
+<%= @subcategory.inspect %>
+<br>
+<%= @article.inspect %>
+<br>
 class SubcategoriesController < ApplicationController
 	def index
 		@category = Category.find(params[:id])
