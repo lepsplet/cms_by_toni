@@ -1,1 +1,13 @@
 <h1>Vsi članki <%= @subcategory.name %></h1>
+<br>
+<% if @articles.empty? %>
+	<p>Ni nobenega članka. Bodi Kralj in napiši kakšnega</p>
+<% else %>
+	<% @articles.each do |item| %>
+		<div><%= link_to item.name, controller: :articles, action: :index, id: item.id %>
+			<%= link_to 'uredi', edit_article_path(item) %>
+			<%= link_to 'izbriši', article_path(item), method: :delete, data: { confirm: "Ali ste prepričani, da želite izbrisati članek?" } %> </div>
+	<% end %>
+<% end %><br>
+<%= link_to 'Napiši nov članek', action: :new, id: @subcategory.id%><br>
+<%= link_to 'Nazaj', controller: :subcategories, action: :index, id: @subcategory.category_id %>

@@ -1,2 +1,15 @@
-<h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
+<h1>Nov članek</h1>
+
+<%= form_for @article, url: { action: :create, id: @subcategory.id} do |f| %>
+	<div><%= f.label :name %></div>
+	<div><%= f.text_field :name %></div>
+
+	<div><%= f.label :body %></div>
+	<div><%= f.text_area :body %></div>
+
+	<div><%= f.submit %></div>
+
+	<br>
+	<%= link_to 'nazaj', action: :index, id: @subcategory.id %>
+<% end %>
+
