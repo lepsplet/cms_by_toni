@@ -34,6 +34,12 @@ def update
 
 	end
 
+	def destroy
+		@subcategory = Subcategory.find(params[:id])
+		@subcategory.destroy
+		redirect_to action: :index, id: @subcategory.category_id
+
+	end
 
 	private
 	def subcategory_params
