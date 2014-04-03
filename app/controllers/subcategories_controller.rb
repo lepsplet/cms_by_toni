@@ -1,7 +1,3 @@
-<%= @subcategory.inspect %>
-<br>
-<%= @article.inspect %>
-<br>
 class SubcategoriesController < ApplicationController
 	def index
 		@category = Category.find(params[:id])
@@ -41,7 +37,7 @@ def update
 	def destroy
 		@subcategory = Subcategory.find(params[:id])
 		@subcategory.destroy
-		redirect_to action: :index, id: @subcategory.category_id
+			redirect_to action: :index, id: @subcategory.category_id
 
 	end
 
