@@ -5,5 +5,4 @@
 	<div><%= f.submit %></div>
 <% end %>
 
-<%= link_to 'nazaj na kategorije', categories_path %>
-<%= @subcategory.inspect %>
+<%= link_to 'nazaj', action: :index, id: @subcategory.category_id %>
