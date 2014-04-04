@@ -1,5 +1,8 @@
 <h1>Spremeni naslov kategorije</h1>
 <%= form_for @category do |f| %>
+
+	<%= render 'error_messages' %>
+
 	<div><%= f.label :name %></div>
 	<div><%= f.text_field :name %></div>
 	<div><%= f.submit %></div>

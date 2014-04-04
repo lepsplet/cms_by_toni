@@ -1,6 +1,9 @@
 <h1>Uredi Članek</h1>
 <%= form_for @article do |f| %>
-	<div><%= f.label :name %></div>
+
+	<%= render 'error_messages' %>
+
+<div><%= f.label :name %></div>
 	<div><%= f.text_field :name %></div>
 
 	<div><%= f.label :body %></div>

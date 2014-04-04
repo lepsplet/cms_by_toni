@@ -1,6 +1,9 @@
 <h1>Nov članek</h1>
 
 <%= form_for @article, url: { action: :create, id: @subcategory.id} do |f| %>
+
+	<%= render 'error_messages' %>
+
 	<div><%= f.label :name %></div>
 	<div><%= f.text_field :name %></div>
 

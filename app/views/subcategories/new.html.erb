@@ -1,6 +1,9 @@
 <h1>Vnesi novo podkategorijo</h1>
 
 <%= form_for @subcategory, url: { action: :create, id: @category.id} do |f| %>
+
+	<%= render 'error_messages' %>
+
 	<div><%= f.label :name %></div>
 	<div><%= f.text_field :name %></div>
 	<div><%= f.submit %></div>
