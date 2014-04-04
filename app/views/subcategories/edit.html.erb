@@ -3,8 +3,8 @@
 
 	<%= render 'error_messages' %>
 
-	<div><%= f.text_field :name, label: 'Ime:' %></div>
-	<div><%= f.submit 'shrani'%></div>
+	<div><%= f.text_field :name, label: 'Ime:',  autofocus: true %></div>
+	<div><%= f.submit 'shrani', class: 'btn btn-primary btn-lg' %></div>
 <% end %>
 
-<%= link_to 'nazaj', action: :index, id: @subcategory.category_id %>
+<%= link_to 'nazaj', { action: :index, id: @subcategory.category_id }, class: 'btn btn-default' %>

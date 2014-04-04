@@ -4,7 +4,7 @@
 
 	<%= render 'error_messages' %>
 
-	<div><%= f.text_field :name, label: 'Ime:', placeholder: 'Vnesite ime nove podkategorije...' %></div>
-	<div><%= f.submit 'shrani'%></div>
+	<div><%= f.text_field :name, label: 'Ime:', placeholder: 'Vnesite ime nove podkategorije...', autofocus: true %></div>
+	<div><%= f.submit 'shrani', class: 'btn btn-primary btn-lg' %></div>
 <% end %>
-<%= link_to 'Nazaj', action: :index, id: @category.id %>
+<%= link_to 'Nazaj', { action: :index, id: @category.id }, class: 'btn btn-default' %>

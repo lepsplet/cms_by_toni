@@ -5,9 +5,10 @@
 <% else %>
 	<% @articles.each do |item| %>
 		<div>
-			 <%= link_to item.name, edit_article_path(item) %>
-			<%= link_to 'izbriši', article_path(item), method: :delete, data: { confirm: "Ali ste prepričani, da želite izbrisati članek?" } %> </div>
+			 <%= link_to item.name, edit_article_path(item), class: 'btn btn-success btn-lg' %>
+			<%= link_to 'izbriši', article_path(item), method: :delete, data: { confirm: "Ali ste prepričani, da želite izbrisati članek?" }, class: 'btn btn-default' %> </div>
 	<% end %>
 <% end %><br>
-<%= link_to 'Napiši nov članek', action: :new, id: @subcategory.id%><br>
-<%= link_to 'Nazaj', controller: :subcategories, action: :index, id: @subcategory.category_id %>
+
+<%= link_to 'Napiši nov članek', { action: :new, id: @subcategory.id }, class: 'btn btn-primary btn-lg' %><br>
+<%= link_to 'Nazaj', { controller: :subcategories, action: :index, id: @subcategory.category_id }, class: 'btn btn-default' %>

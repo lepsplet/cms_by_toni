@@ -3,11 +3,11 @@
 
 	<%= render 'error_messages' %>
 
-	<div><%= f.text_field :name, label: 'Naslov:', placeholder: 'vnesite naslov članka...' %></div>
+	<div><%= f.text_field :name, label: 'Naslov:', placeholder: 'vnesite naslov članka...', autofocus: true %></div>
 
 	<div><%= f.text_area :body, label: 'Besedilo:', placeholder: 'napišite članek...' %></div>
-	<div><%= f.submit 'shrani' %></div>
+	<div><%= f.submit 'shrani', class: 'btn btn-primary btn-lg' %></div>
 <% end %>
 <br>
-<%= link_to 'nazaj', action: :index, id: @article.subcategory_id %>
+<%= link_to 'nazaj', { action: :index, id: @article.subcategory_id }, class: 'btn btn-default' %>
 

@@ -1,13 +1,13 @@
 <h1>Vse podkategorije za <%= @category.name %></h1>
-<br>
+<b r>
 <% if @subcategories.empty? %>
-	<p>Ni nobene podkategorije. Bodi car in vnesi eno </p>
+	<p>Ni nobene podkategorije. Bodi car in vnesi eno. </p>
 <% else %>
 	<% @subcategories.each do |item| %>
-		<div><%= link_to item.name, controller: :articles, action: :index, id: item.id %>
-			<%= link_to 'uredi', edit_subcategory_path(item) %>
-			<%= link_to 'izbriši', subcategory_path(item), method: :delete, data: { confirm: "Ali ste prepričani, da želite izbrisati podkategorijo?" } %> </div>
+		<div><%= link_to item.name, { controller: :articles, action: :index, id: item.id }, class: 'btn btn-success btn-lg' %>
+			<%= link_to 'uredi', edit_subcategory_path(item), class: 'btn btn-default' %>
+			<%= link_to 'izbriši', subcategory_path(item), method: :delete, data: { confirm: "Ali ste prepričani, da želite izbrisati podkategorijo?" }, class: 'btn btn-default' %> </div>
 	<% end %>
 <% end %><br>
-<%= link_to 'Dodaj podkategorijo', action: :new, id: @category.id%><br>
-<%= link_to 'Nazaj', categories_path %>
+<%= link_to 'Dodaj podkategorijo', { action: :new, id: @category.id }, class: 'btn btn-primary' %><br>
+<%= link_to 'Nazaj', categories_path, class: 'btn btn-default' %>
