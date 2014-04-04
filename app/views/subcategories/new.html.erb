@@ -1,11 +1,10 @@
 <h1>Vnesi novo podkategorijo</h1>
 
-<%= form_for @subcategory, url: { action: :create, id: @category.id} do |f| %>
+<%= bootstrap_form_for @subcategory, url: { action: :create, id: @category.id} do |f| %>
 
 	<%= render 'error_messages' %>
 
-	<div><%= f.label :name %></div>
-	<div><%= f.text_field :name %></div>
-	<div><%= f.submit %></div>
+	<div><%= f.text_field :name, label: 'Ime:', placeholder: 'Vnesite ime nove podkategorije...' %></div>
+	<div><%= f.submit 'shrani'%></div>
 <% end %>
 <%= link_to 'Nazaj', action: :index, id: @category.id %>

@@ -1,16 +1,13 @@
 <h1>Nov članek</h1>
 
-<%= form_for @article, url: { action: :create, id: @subcategory.id} do |f| %>
+<%= bootstrap_form_for @article, url: { action: :create, id: @subcategory.id} do |f| %>
 
 	<%= render 'error_messages' %>
 
-	<div><%= f.label :name %></div>
-	<div><%= f.text_field :name %></div>
+	<div><%= f.text_field :name, label: 'Naslov:', placeholder: 'vnesite naslov članka...' %></div>
 
-	<div><%= f.label :body %></div>
-	<div><%= f.text_area :body %></div>
-
-	<div><%= f.submit %></div>
+	<div><%= f.text_area :body, label: 'Besedilo:', placeholder: 'napišite članek...', rows: 25 %></div>
+	<div><%= f.submit 'shrani' %></div>
 
 	<br>
 	<%= link_to 'nazaj', action: :index, id: @subcategory.id %>

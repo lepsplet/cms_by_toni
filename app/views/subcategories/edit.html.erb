@@ -1,8 +1,10 @@
 <h1>Spremeni naslov podkategorije</h1>
-<%= form_for @subcategory do |f| %>
-	<div><%= f.label :name %></div>
-	<div><%= f.text_field :name %></div>
-	<div><%= f.submit %></div>
+<%= bootstrap_form_for @subcategory do |f| %>
+
+	<%= render 'error_messages' %>
+
+	<div><%= f.text_field :name, label: 'Ime:' %></div>
+	<div><%= f.submit 'shrani'%></div>
 <% end %>
 
 <%= link_to 'nazaj', action: :index, id: @subcategory.category_id %>
