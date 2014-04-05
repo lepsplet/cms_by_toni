@@ -1,4 +1,5 @@
-<h1>Vse kategorije</h1>
+
+<h2>Vse kategorije</h2>
 <% @categories.each do |category| %>
 	<div>
 		<%= link_to category.name, { controller: :subcategories, action: :index, id: category.id }, class: 'btn btn-success btn-lg' %>
