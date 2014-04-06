@@ -12,10 +12,6 @@
  *= require_tree .
  */
 
-.container {
-	width: 500px;
-	margin: 10px auto;
-}
 
 body{
 	font-family: 'Open Sans', sans-serif;

@@ -1,0 +1,18 @@
+// Place all the styles related to the news controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$welcom-color: #F9AEAE;
+
+.color {
+	color: darken($welcom-color, 5%);
+}
+.big {
+	font-size: 8em;   
+	color: $welcom-color;
+	z-index: -1;
+}
+.small-caps{
+	font-variant: small-caps;
+	color: red;
+}

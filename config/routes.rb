@@ -1,22 +1,10 @@
 CmsByToni::Application.routes.draw do
 
-  get "subcategories/index"
-  get "subcategories/new"
-  get "subcategories/edit"
-	resources :categories 
-	resources :subcategories
-	resources :articles
+	root "news#index" 
+	resources :news, only: [ :index, :show ]
+	resources :categories, :subcategories, :articles
 
 
-  get "categories/index"
-  get "categories/new"
-  get "categories/edit"
-  get "articles/index"
-  get "articles/show"
-  get "articles/new"
-  get "articles/edit"
-	root "categories#index" #tuka se
-  get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
