@@ -5,7 +5,7 @@
 <% end %>
 
 <% for article in @articles %>
-	<div><%= link_to article.name,  articles_path(article) %></div>
+	<div><%= link_to article.name,  controller: :texts, action: :show, id: article.id %></div>
 <% end %>
 
 

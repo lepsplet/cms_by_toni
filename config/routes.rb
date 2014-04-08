@@ -1,5 +1,6 @@
 CmsByToni::Application.routes.draw do
 
+  get "texts/show"
 	root "news#index" 
 	resources :news, only: [ :index, :show ]
 	resources :categories, :subcategories, :articles
