@@ -1,2 +1,12 @@
-<h1>News#show</h1>
-<p>Find me in app/views/news/show.html.erb</p>
+<h1>Vse novice za <%= @subcategories.name %></h1>
+
+<% if @articles.empty? %>
+	<h4>V tej kategoriji ni novic. Se opravičujemo za nevšečnost :)</h4>
+<% end %>
+
+<% for article in @articles %>
+	<div><%= link_to article.name,  articles_path(article) %></div>
+<% end %>
+
+
+

@@ -8,5 +8,9 @@ class NewsController < ApplicationController
 
   def show
 	  @categories = Category.all
+
+	  @subcategories = Subcategory.find(params[:id])
+	  @articles = @subcategories.articles
+
   end
 end
