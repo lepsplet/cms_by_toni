@@ -14,6 +14,7 @@ class NewsController < ApplicationController
 
 		@subcategories = Subcategory.find(params[:id])
 		@articles = @subcategories.articles
+
 		add_breadcrumb @subcategories.name, news_path
 
 	end
