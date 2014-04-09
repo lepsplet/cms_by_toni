@@ -1,16 +1,20 @@
 class NewsController < ApplicationController
 
 	layout 'news'
-	
-  def index
-	  @categories = Category.all
-  end
 
-  def show
-	  @categories = Category.all
+	add_breadcrumb "Domov", :root_path
 
-	  @subcategories = Subcategory.find(params[:id])
-	  @articles = @subcategories.articles
+	def index
+		@categories = Category.all
+	end
 
-  end
+	def show
+
+		@categories = Category.all
+
+		@subcategories = Subcategory.find(params[:id])
+		@articles = @subcategories.articles
+		add_breadcrumb @subcategories.name, news_path
+
+	end
 end
