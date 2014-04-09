@@ -1,5 +1,6 @@
 CmsByToni::Application.routes.draw do
 
+  devise_for :users
   get "texts/show"
 	root "news#index" 
 	resources :news, only: [ :index, :show ]

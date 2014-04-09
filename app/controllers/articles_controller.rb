@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+	before_action :authenticate_user!
+
   def index
 	  @subcategory = Subcategory.find(params[:id])
 	  @articles = @subcategory.articles.all

@@ -1,4 +1,6 @@
 class SubcategoriesController < ApplicationController
+	before_action :authenticate_user!
+
 	def index
 		@category = Category.find(params[:id])
 		@subcategories = @category.subcategories.all
