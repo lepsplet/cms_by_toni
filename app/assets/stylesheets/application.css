@@ -16,3 +16,9 @@
 body{
 	font-family: 'Open Sans', sans-serif;
 }
+
+.border-css{
+	border: 1px solid silver;
+	min-height: 500px;
+	padding: 30px; 
+}
