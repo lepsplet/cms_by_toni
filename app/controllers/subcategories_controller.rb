@@ -1,14 +1,17 @@
 class SubcategoriesController < ApplicationController
 	before_action :authenticate_user!
+	add_breadcrumb "Domov", :categories_path
 
 	def index
 		@category = Category.find(params[:id])
 		@subcategories = @category.subcategories.all
+		add_breadcrumb @category.name, controller: 'subcategories', action: 'index', id: @category.id
 	end
 
 	def new
 		@category = Category.find(params[:id])
 		@subcategory = @category.subcategories.build
+		add_breadcrumb @category.name, controller: 'subcategories', action: 'index', id: @category.id
 	end
 
 	def create
@@ -24,6 +27,8 @@ class SubcategoriesController < ApplicationController
 
 	def edit
 		@subcategory = Subcategory.find(params[:id])
+		@category = Category.find(@subcategory.category_id)
+		add_breadcrumb @category.name, controller: 'subcategories', action: 'index', id: @category.id
 	end
 def update
 		@subcategory = Subcategory.find(params[:id])
