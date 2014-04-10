@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
 	  @subcategory = Subcategory.find(params[:id])
 	  @articles = @subcategory.articles.all
 	  @category = Category.find(@subcategory.category_id) #to je za breadchrumps
-	  add_breadcrumb @category.name, controller: 'categories', action: 'index', id: @category.id
+	  add_breadcrumb @category.name, controller: 'subcategories', action: 'index', id: @category.id
 	  add_breadcrumb @subcategory.name, action: 'index', id: @subcategory.id
   end
 
