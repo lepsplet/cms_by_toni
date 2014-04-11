@@ -38,9 +38,14 @@ h2{
 	font-family: 'Revalia', cursive;
 }
 
+
 .by-toni{
 	font-size: 1.5em;
 	font-family: 'Montez', cursive;
 	margin-top: -30px;
 	margin-left: 3px;
+}
+
+.no-hover:hover{
+	text-decoration: none;
 }
