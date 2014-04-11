@@ -19,7 +19,9 @@ body{
 
 .border-css{
 	border: 1px solid silver;
-	min-height: 500px;
+	min-height: 1000px;
+	margin-top: -50px;
+	margin-bottom: 50px; 
 	padding: 30px; 
 }
 

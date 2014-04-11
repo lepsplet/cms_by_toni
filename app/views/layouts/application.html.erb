@@ -22,7 +22,10 @@
 					</div>
 				<% end %>
 			
-				<%= render_breadcrumbs %>
+					<% if defined?(@home_page) %>
+					<% else %>
+							<%= render_breadcrumbs %>
+					<% end %>
 				<%= yield %>
 			</div>
 		</div>
