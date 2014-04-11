@@ -1,7 +1,6 @@
-<h2>Vsi članki <%= @subcategory.name %></h2>
-<br>
+<h2 class="text-center">Vsi članki <%= @subcategory.name %></h2>
 <% if @articles.empty? %>
-	<p>Ni nobenega članka. Bodi Kralj in napiši kakšnega</p>
+	<p class="text-center">Ni nobenega članka. Bodi Kralj in napiši kakšnega.</p>
 <% else %>
 	<% @articles.each do |item| %>
 		<div>

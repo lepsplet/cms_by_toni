@@ -10,9 +10,6 @@ class ArticlesController < ApplicationController
 	  add_breadcrumb @subcategory.name, action: 'index', id: @subcategory.id
   end
 
-  def show
-  end
-
   def new
 	  @subcategory = Subcategory.find(params[:id])
 	  @article = @subcategory.articles.build

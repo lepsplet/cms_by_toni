@@ -37,6 +37,9 @@
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 			<% if user_signed_in? %>
+				  <li>
+				  <button><%= link_to('CMS', categories_path, class: 'btn btn-danger') %></button>
+				  </li>
 				<li><a><%= current_user.email %></a></li>
 				  <li>
 				    <%= link_to('Odjavi se', destroy_user_session_path, :method => :delete) %>
