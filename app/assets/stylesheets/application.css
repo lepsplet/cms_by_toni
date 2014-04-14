@@ -20,7 +20,7 @@ body{
 .border-css{
 	border: 1px solid silver;
 	min-height: 1000px;
-	margin-top: -50px;
+	margin-top: 57px;
 	margin-bottom: 50px; 
 	padding: 30px; 
 }
@@ -42,10 +42,17 @@ h2{
 .by-toni{
 	font-size: 1.5em;
 	font-family: 'Montez', cursive;
-	margin-top: -30px;
+	margin-top: -23px;
 	margin-left: 3px;
 }
 
 .no-hover:hover{
 	text-decoration: none;
+}
+
+.cms-alert{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 }
