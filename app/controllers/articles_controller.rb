@@ -27,6 +27,7 @@ class ArticlesController < ApplicationController
 
 	  if @article.save
 		  redirect_to action: :index, id: @article.subcategory_id
+			flash[:notice] = "Uspešno ste dodali nov članek z naslovom #{@article.name}" 
 		  else
 			  render :new
 		  end
@@ -48,6 +49,7 @@ class ArticlesController < ApplicationController
 
 		if @article.update(article_params)
 			redirect_to action: :index, id: @article.subcategory_id 
+			flash[:notice] = "Uspešno ste spremenili članek v #{@article.name}" 
 			else
 				render 'edit'
 		end
@@ -57,6 +59,7 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 		@article.destroy
 		redirect_to action: :index, id: @article.subcategory_id
+			flash[:notice] = "Uspešno ste izbrisali članek z naslovom #{@article.name}" 
 
   end
 	private

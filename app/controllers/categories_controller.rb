@@ -16,7 +16,7 @@ class CategoriesController < ApplicationController
 
 		if @category.save
 			redirect_to categories_path
-			flash[:notice] = "Uspešno ste ustvarili novo kategorijo: #{@category.name}" 
+			flash[:notice] = "Uspešno ste ustvarili novo kategorijo #{@category.name}" 
 		else
 			render 'new'
 		end
@@ -30,7 +30,7 @@ class CategoriesController < ApplicationController
 		@category = Category.find(params[:id])
 		if @category.update(category_params)
 			redirect_to categories_path
-			flash[:notice] = "Uspešno ste spremenili  kategorijo: #{@category.name}" 
+			flash[:notice] = "Uspešno ste spremenili  kategorijo v #{@category.name}" 
 			else
 				render 'edit'
 			end
@@ -39,7 +39,7 @@ class CategoriesController < ApplicationController
 		@category = Category.find(params[:id])
 		@category.destroy
 		redirect_to categories_path
-		flash[:notice] = "Uspešno ste izbrisali  kategorijo: #{@category.name}" 
+		flash[:notice] = "Uspešno ste izbrisali  kategorijo #{@category.name}" 
 	 end
 
 	private
