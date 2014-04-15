@@ -1,2 +1,7 @@
-<h1><%= @article.name %></h1>
-<div><%= @article.body %></div>
+<div class="row">
+	<div class="col-lg-offset-3 col-lg-6">
+		<h1><%= @article.name %></h1>
+		<p><%= @article.created_at.strftime("%d %b. %Y") %></p>
+		<div class="text-justify"><%= simple_format( @article.body ) %></div>
+	</div>
+</div>

@@ -1,12 +1,15 @@
-<h1>Vse novice za <%= @subcategories.name %></h1>
+<div class="row">
+	<div class="col-lg-offset-3 col-lg-6">
+		<h1>Vse novice za <%= @subcategories.name %></h1>
 
-<% if @articles.empty? %>
-	<h4>V tej kategoriji ni novic. Se opravičujemo za nevšečnost :)</h4>
-<% end %>
+		<% if @articles.empty? %>
+			<h4>V tej kategoriji ni novic. Se opravičujemo za nevšečnost :)</h4>
+		<% end %>
 
-<% for article in @articles %>
-	<div><%= link_to article.name,  controller: :texts, action: :show, id: article.id %></div>
-<% end %>
-
-
-
+		<% for article in @articles %>
+			<div><%= link_to article.name,  controller: :texts, action: :show, id: article.id %>
+			- pretekel čas od objave: <%= time_ago_in_words(article.created_at) %>
+		</div>
+		<% end %>
+	</div>
+</div>

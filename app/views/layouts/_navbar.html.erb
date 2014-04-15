@@ -15,10 +15,9 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Link</a></li>
 			<% for category in @categories %>
-				<li class="dropdown <%= params[:id] %>">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= category.name %> <b class="caret"></b></a>
+				<li class="dropdown <%= params[:id] %> ">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= category.name %> <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<% subcategories = category.subcategories.all %>
 
