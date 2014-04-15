@@ -56,3 +56,8 @@ h2{
 	left: 0;
 	width: 100%;
 }
+
+.cms-button{
+	width: 100px;
+	margin-bottom: 2;
+}
