@@ -1,9 +1,9 @@
 CmsByToni::Application.routes.draw do
 
 	devise_for :users, controllers: { registrations: "registrations", sessions: "sessions"  }
-	get "texts/show"
+	get "texts/show", path: :clanki
 	root "news#index" 
-	resources :news, only: [ :index, :show ]
+	resources :news, only: [ :index, :show ], path: :kategorija
 	resources :categories, :subcategories, :articles
 
 

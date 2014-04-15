@@ -1,6 +1,6 @@
 <h2 class="text-center">Vse podkategorije za <%= @category.name %></h2>
 <% if @subcategories.empty? %>
-	<p>Ni nobene podkategorije. Bodi car in vnesi eno. </p>
+	<p class="text-center">Ni nobene podkategorije. Bodi car in vnesi eno. </p>
 <% else %>
 	<% @subcategories.each do |item| %>
 		<div><%= link_to item.name, { controller: :articles, action: :index, id: item.id }, class: 'btn btn-success btn-lg' %>
