@@ -20,6 +20,7 @@ development:
   database: cms_by_toni_development
   pool: 5
   host: localhost
+  user: tonko     
   password: chesho
 
   # Connect on a TCP socket. Omitted by default since the client uses a
